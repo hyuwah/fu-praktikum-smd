@@ -1,5 +1,7 @@
 # Source Code Praktikum SMD Fisika Unpad
 
+[English Version](../blob/master/README.md#english)
+
 ## Indonesia
 
 Kumpulan listing program yang digunakan pada _Praktikum Sistem Mikroprosesor Digital_ untuk mahasiswa **Fisika FMIPA Unpad** semester 7 bidang peminatan instrumentasi dan elektronika tahun 2015.
@@ -50,6 +52,7 @@ Listing program dikelompokkan berdasarkan modul praktikum dan diberi nama _latih
 ### Referensi
 Hidayat, Darmawan. 2015.*Diktat Praktikum Sistem Mikroprosesor Digital - Mikrokontroler AT89C51*. Laboratorium Instrumentasi Elektronika Prodi Fisika FMIPA Unpad
 
+---
 
 ## English
 
