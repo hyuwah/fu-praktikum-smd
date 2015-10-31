@@ -15,4 +15,5 @@ mulai:
   mov R1, #0F1h   ; Menyalin data F1h ke Register R1
   mov 0B0h, R1    ; Menyalin nilai dari R1 (1111 0001) ke P3 (direct)
   jmp mulai
+  ;changes
 end
