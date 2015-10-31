@@ -1,6 +1,6 @@
 # Source Code Praktikum SMD Fisika Unpad
 
-[English Version](../blob/master/README.md#english)
+[English Version](../master/README.md#english)
 
 ## Indonesia
 
