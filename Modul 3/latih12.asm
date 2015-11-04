@@ -25,4 +25,8 @@ tunda:  mov R7, #0
         ret
 
 tabel: db 01h, 12h, 23h, 34h    ; tabel digit
+; Jika bcd (biasa) tak support multi 7 segment diganti :
+; 11h, 22h, 43h, 84h
+; MSB: 1111b LSB: BCD
+; MSB: 8421d LSB: BCD
 end
