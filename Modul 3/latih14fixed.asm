@@ -43,7 +43,36 @@ L1:
         jmp L0
 
 ambiltombol:                      ; mengambil data dari keypad
-        mov P3, #127
+polls:  ;metode polling untuk mendeteksi tombol yang ditekan
+;scanning kolom 1
+  clr p3.0
+  setb p3.1
+  setb p3.2
+  jnb p3.3, dapat   ; tombol 1 (76h)
+  jnb p3.4, dapat   ; tombol 4 (6eh)
+  jnb p3.5, dapat   ; tombol 7 (5eh)
+  jnb p3.6, dapat   ; tombol * (3eh)
+  setb p3.0
+;scanning kolom 2
+  setb p3.0
+  clr p3.1
+  setb p3.2
+  jnb p3.3, dapat   ; tombol 2 (75h)
+  jnb p3.4, dapat   ; tombol 5 (6dh)
+  jnb p3.5, dapat   ; tombol 8 (5dh)
+  jnb p3.6, dapat   ; tombol 0 (3dh)
+  setb p3.1
+;scanning kolom 3
+  setb p3.0
+  setb p3.1
+  clr p3.2
+  jnb p3.3, dapat   ; tombol 3 (73h)
+  jnb p3.4, dapat   ; tombol 6 (6bh)
+  jnb p3.5, dapat   ; tombol 9 (5bh)
+  jnb p3.6, dapat   ; tombol # (3bh)
+  setb p3.2
+jmp polls ;terus loop sampai dapat tombol yang ditekan
+dapat:  mov P3, #127
         mov a, P3
         cjne a, #127, ada
         mov a, #FFh

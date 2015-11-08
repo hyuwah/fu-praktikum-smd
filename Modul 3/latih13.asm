@@ -52,7 +52,7 @@ ulang:  mov P2, @R1
         dec R1
         call tunda
         djnz R0, ulang
-        jmp digit
+        ret
 tunda:  mov R7, #0
         djnz R7, $
         ret
