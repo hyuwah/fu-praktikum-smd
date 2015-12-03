@@ -11,14 +11,14 @@
 ;-------------------------------------------------------------------
 
 scountL equ 0h      ;nilai cacah nibble bawah
-scountH equ 20h     ;nilai cacah nibble atas
+scountH equ 10h     ;nilai cacah nibble atas
 reload equ 86h      ;nilai reload TL0 di TH0
 
    mov TMOD,#82h    ;konfigurasi timer 0 di mode 2
    setb TR0         ;aktifkan timer 0
    mov b,#0
-   mov r7,#scountL  ;pencacah software nibble bawah
-   mov r6,#scountH  ;pencacah software nibble atas
+   mov r6,#scountL  ;pencacah software nibble bawah
+   mov r7,#scountH  ;pencacah software nibble atas
 
    mov a,b
    lcall display

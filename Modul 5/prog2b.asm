@@ -17,7 +17,7 @@ scount equ 9Ah
   mov r7,#scount  ;counter-nya software
   mov a,b         ;isi a dengan b
   lcall display   ;mengambil pola tampilan
-  mov P1,a        ;menampilkan digit
+  mov P2,a        ;menampilkan digit
   mov a,b         ;mengambil nilai cacahan
 
 loop:
@@ -30,7 +30,7 @@ loop:
   anl b,#0fh      ;modulus 0fh
   mov a,b         ;isi a dengan b
   lcall display   ;mengambil pola tampilan
-  mov P1,a        ;menampilkan digit
+  mov P2,a        ;menampilkan digit
   mov a,b         ;isi a dengan nilai cacahan sekarang
   sjmp loop
 

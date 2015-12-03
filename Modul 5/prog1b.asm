@@ -9,7 +9,7 @@
 ;-------------------------------------------------------------------
 
   setb T0       ;menyiapkan T0 sebagai masukkan
-  mov Tmod,#80h ;mengonfigurasi counter 0 mode 0
+  mov Tmod,#84h ;mengonfigurasi counter 0 mode 0
   setb TR0      ;menyalakan counter
   mov b,#0      ;nilai cacahan awal
   mov a,b       ;mengisi a dengan cacahan awal

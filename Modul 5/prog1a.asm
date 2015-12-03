@@ -9,7 +9,7 @@
 ; Output: 7Seg(P1) dan Motor Stepper(P2)
 ;-------------------------------------------------------------------
 
-  org 0
+  org 00h
   ljmp mulai
   org 13h
   ljmp motor

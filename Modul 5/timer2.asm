@@ -12,7 +12,7 @@
 
 scount equ 0Eh
 
-   mov TMOD,#80h    ;konfigurasi timer 0 di mode 0
+   mov TMOD,#81h    ;konfigurasi timer 0 di mode 0
    setb TR0         ;aktifkan timer 0
    mov b,#0
    mov r7,#scount   ;pencacah software

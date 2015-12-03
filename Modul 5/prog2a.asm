@@ -10,14 +10,14 @@
 
   setb T0       ;T0 sebagai input
 tinggi:
-  mov tmod,#0ch ;(0000 1100) memilih timer/counter 0
+  mov tmod, #00001100b ;(0000 1100) memilih timer/counter 0
                 ;sebagai counter 0 mode 0
   setb TR0      ;mengaktifkan counter 0
 
   mov b,#0      ;nilai cacahan awal
   mov a,b       ;isi a dengan cacahan awal
   lcall display ;mengambil pola tampilan
-  mov P1,a      ;menampilkan digit
+  mov P2,a      ;menampilkan digit
   mov a,b       ;ambil nilai cacahan awal
 loop:
   mov a,TL0     ;mengambil nilai counter
@@ -29,7 +29,7 @@ loop:
   anl b,#0fh    ;modulus 0fh
   mov a,b       ;isi a dengan b
   lcall display ;mengambil pola tampilan
-  mov P1,a      ;menampilkan digit
+  mov P2,a      ;menampilkan digit
   mov a,b       ;ambil nilai cacahan
   sjmp loop
 
