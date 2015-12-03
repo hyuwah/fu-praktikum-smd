@@ -7,10 +7,10 @@
 ;         Timer 0 13bit diulang 122 kali (r7)
 ;         tidak termasuk header program
 ; Input : P3.4 masukkan pencacah
-; Output: 7Seg(P2)
+; Output: 7Seg(P1)
 ;-------------------------------------------------------------------
 
-scount equ 30h
+scount equ 07Ah
 
    mov TMOD,#80h    ;konfigurasi timer 0 di mode 0
    setb TR0         ;aktifkan timer 0
@@ -19,7 +19,7 @@ scount equ 30h
 
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
 
 loop:
@@ -33,7 +33,7 @@ loop:
    anl b,#0Fh
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
    sjmp loop
 

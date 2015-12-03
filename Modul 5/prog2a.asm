@@ -17,7 +17,7 @@ tinggi:
   mov b,#0      ;nilai cacahan awal
   mov a,b       ;isi a dengan cacahan awal
   lcall display ;mengambil pola tampilan
-  mov P2,a      ;menampilkan digit
+  mov P1,a      ;menampilkan digit
   mov a,b       ;ambil nilai cacahan awal
 loop:
   mov a,TL0     ;mengambil nilai counter
@@ -29,7 +29,7 @@ loop:
   anl b,#0fh    ;modulus 0fh
   mov a,b       ;isi a dengan b
   lcall display ;mengambil pola tampilan
-  mov P2,a      ;menampilkan digit
+  mov P1,a      ;menampilkan digit
   mov a,b       ;ambil nilai cacahan
   sjmp loop
 

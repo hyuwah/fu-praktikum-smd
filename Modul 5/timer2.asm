@@ -7,7 +7,7 @@
 ;         Timer 0 16bit diulang 15 kali (r7)
 ;         tidak termasuk header program
 ; Input : P3.4 masukkan pencacah
-; Output: 7Seg(P2)
+; Output: 7Seg(P1)
 ;-------------------------------------------------------------------
 
 scount equ 0Eh
@@ -19,7 +19,7 @@ scount equ 0Eh
 
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
 
 loop:
@@ -33,7 +33,7 @@ loop:
    anl b,#0Fh
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
    sjmp loop
 

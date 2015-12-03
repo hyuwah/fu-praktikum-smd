@@ -7,7 +7,7 @@
 ;         Kapanpun nibble bawah (TL0) pencacah overflow,
 ;         nibble atas (TH0) akan disalin ke nibble bawah (TL0)
 ; Input : P3.4 masukkan pencacah
-; Output: 7Seg(P2)
+; Output: 7Seg(P1)
 ;-------------------------------------------------------------------
 
   setb T0         ;menyiapkan T0 sebagai masukkan
@@ -17,7 +17,7 @@
   mov b,#0        ;nilai cacahan awal
   mov a,b         ;isi a dengan b
   lcall display   ;ambil pola tampilan
-  mov p2,a        ;tampilkan digit
+  mov p1,a        ;tampilkan digit
   mov a,b         ;mengambil nilai cacahan lagi
 
 loop:
@@ -30,7 +30,7 @@ loop:
   anl b,#0Fh      ;modulus 0Fh
   mov a,b
   lcall display
-  mov p2,a
+  mov p1,a
   mov a,b
 
   mov a,TH0       ;mengisi a dengan nibble atas counter

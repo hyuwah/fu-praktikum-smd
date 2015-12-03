@@ -7,7 +7,7 @@
 ;         Timer 0 8bit auto diulang 256-134 kali (r6 & r7)
 ;         tidak termasuk header program
 ; Input : P3.4 masukkan pencacah
-; Output: 7Seg(P2)
+; Output: 7Seg(P1)
 ;-------------------------------------------------------------------
 
 scountL equ 0h      ;nilai cacah nibble bawah
@@ -22,7 +22,7 @@ reload equ 86h      ;nilai reload TL0 di TH0
 
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
 
 loop:
@@ -37,7 +37,7 @@ loop:
    anl b,#0Fh
    mov a,b
    lcall display
-   mov P2,a
+   mov P1,a
    mov a,b
    sjmp loop
 

@@ -3,18 +3,18 @@
 ; M.Wahyudin (140310120031)
 ;
 ; Name  : LATIH22.ASM (PROG1B)
-; Desc  : Menggunakan counter 0 di mode 0 atau 1
+; Desc  : Menggunakan timer 0 di mode 0
 ; Input : P3.4 masukkan pencacah
-; Output: 7Seg(P2)
+; Output: 7Seg(P1)
 ;-------------------------------------------------------------------
 
   setb T0       ;menyiapkan T0 sebagai masukkan
-  mov Tmod,#84h ;mengonfigurasi counter 0 mode 0
-  setb TR0      ;menyalakan counter
+  mov Tmod,#84h ;mengonfigurasi timer 0 mode 0
+  setb TR0      ;menyalakan timer
   mov b,#0      ;nilai cacahan awal
   mov a,b       ;mengisi a dengan cacahan awal
   lcall display ;mengambil pola tampilan
-  mov p2,a      ;menampilkan digit
+  mov p1,a      ;menampilkan digit
   mov a,b       ;mengambil nilai cacahan lagi
 
 loop:
@@ -27,7 +27,7 @@ loop:
   anl b,#0Fh    ;modulus 0Fh
   mov a,b       ;isi a dengan nilai cacahan
   lcall display ;mengambil pola tampilan
-  mov p2,a      ;menampilkan digit
+  mov p1,a      ;menampilkan digit
   mov a,b       ;mengambil nilai cacahan skrg
   sjmp loop
 
